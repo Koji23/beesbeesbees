@@ -7,9 +7,13 @@ var RetiredForagerBee = function() {
 
 };
 
-RetiredForagerBee.prototype = Object.create(ForagerBee);
+RetiredForagerBee.prototype = Object.create(ForagerBee.prototype);
 RetiredForagerBee.prototype.constructor = RetiredForagerBee;
 
 RetiredForagerBee.prototype.forage = function(){
   return 'I am too old, let me play cards instead';
+}
+
+RetiredForagerBee.prototype.gamble = function(){
+  this.treasureChest.push('treasure');
 }
